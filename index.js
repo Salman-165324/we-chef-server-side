@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express() 
 const port = 5000; 
-
+app.use(cors())
 const allChefs = require('./data/chefs.json')
 
 app.get('/', (req, res) => {
