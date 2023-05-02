@@ -14,6 +14,16 @@ app.get('/allChefs', (req, res) => {
     res.send(allChefs); 
 })
 
+app.get('/allChefs/:id', (req, res) => {
+
+    const id = req.params.id; 
+    
+    const selectedChef = allChefs.find( chefs => chefs.id == id)
+    res.send(selectedChef);
+    
+})
+
+
 
 
 app.listen(port, () => {
